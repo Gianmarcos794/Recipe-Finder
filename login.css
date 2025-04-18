@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #f4f4f9, #ff6f61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 10%;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  word-spacing: -0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: bounce 1s infinite;
+  animation-delay: 0.5s;
+  
+}
+
+h2 {
+  position: absolute;
+  top: 20%;
+  font-size: 2.5rem;
+  color: beige;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  word-spacing: -0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.p {
+  position: absolute;
+  top: 60%;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #f4f4f9;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.form-toggle button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #e65b55;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    top: 5%;
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    top: 15%;
+    margin-left: 0;
+  }
+
+  .p {
+    font-size: 1rem;
+    top: 55%;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Recipe Finder</title>
+  <link rel="stylesheet" href="login.css"> 
+  <h1>🍕 Recipe Finder 🍕 </h1>
+  <h2>Please Log In</h2>
+</head>
+<body>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    <br>
+    <button type="submit">Log In</button>
+  </form>
+  <p class="p">Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+
+  <script src="login.js"></script>
+  <script>
+   
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!username || !password) {
+        alert("Both fields are required.");
+        return;
+      }
+
+     
+      const users = JSON.parse(localStorage.getItem("users")) || {};
+
+
+      if (!users[username] || users[username].password !== password) {
+        alert("Invalid username or password. Please try again.");
+        return;
+      }
+
+      localStorage.setItem("currentUser", username);
+      alert(`Welcome back, ${username}!`);
+      window.location.href = "index.html"; 
+    });
+
+   
+    if (!localStorage.getItem("users")) {
+      const testUsers = {
+        "testuser": { password: "password123" }
+      };
+      localStorage.setItem("users", JSON.stringify(testUsers));
+    }
+  </script>
+</body>
+</html>

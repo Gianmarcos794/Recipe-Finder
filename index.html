@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3 class="sidebar-title">Saved Recipes</h3>
+      <span class="sidebar-close" id="sidebarClose">&times;</span>
+    </div>
+    <ul class="saved-recipes-list" id="savedRecipesList">
+    </ul>
+    <button class="logout-button" id="logoutButton">Log Out</button>
+  </aside>
+  
+  <div class="main-content">
+    <header>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <a href="#" class="logo">RecipeFinder</a>
+      <div class="user-profile">
+        <div class="user-avatar" id="userAvatar">+</div>
+      </div>
+    </header>
+    
+    <main class="container">
+      <section class="hero">
+        <h1>Discover Simple, Delicious Recipes</h1>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search for recipes...">
+          <button class="search-btn">Search</button>
+          <select class="category-select" id="categorySelect">
+            <option value="">All Categories</option>
+          </select>
+      </section>
+      
+      <section class="carousel-container">
+        <h2 id="recipesHeading">Today's Meals</h2>
+        <div class="carousel" id="recipeCarousel">
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carouselPrev" disabled>&lt;</button>
+          <button class="carousel-btn" id="carouselNext">&gt;</button>
+        </div>
+        <div class="carousel-nav" id="carouselNav">
+        </div>
+      </section>
+    </main>
+    
+    <div class="modal" id="recipeModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Recipe Title</h3>
+          <div>
+            <button class="save-recipe-btn" id="saveRecipeBtn">
+              <span id="saveBtnText">Save Recipe</span>
+            </button>
+            <span class="modal-close" id="modalClose">&times;</span>
+          </div>
+        </div>
+        <div class="modal-body" id="modalBody">
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 KnowSys Technologies. All recipes sourced from TheMealDB API.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
