@@ -4,7 +4,12 @@
       "dataDir": "dataconnect/.dataconnect/pgliteData"
     }
   },
-  "dataconnect": {
-    "source": "dataconnect"
+  "hosting": {
+    "public": "Recipe-Finder",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
