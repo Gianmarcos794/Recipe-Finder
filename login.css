@@ -143,7 +143,7 @@ form button:hover {
   }
 }
 
-/* Responsive Design for Phones */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -159,7 +159,7 @@ form button:hover {
 
   .p {
     font-size: 1rem;
-    top: 55%;
+    top: 70%; 
   }
 
   .form-container {
