@@ -1,11 +1,7 @@
 {
-  "emulators": {
-    "dataconnect": {
-      "dataDir": "dataconnect/.dataconnect/pgliteData"
-    }
-  },
+  
   "hosting": {
-    "public": "Recipe-Finder",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
